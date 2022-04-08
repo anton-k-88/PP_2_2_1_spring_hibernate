@@ -10,9 +10,6 @@ public class Car {
     @GeneratedValue
     private Long id;
 
-    @OneToOne(mappedBy = "car")
-    private User owner;
-
     @Column
     private String model;
 
@@ -32,14 +29,6 @@ public class Car {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public User getOwner() {
-        return owner;
-    }
-
-    public void setOwner(User owner) {
-        this.owner = owner;
     }
 
     public String getModel() {
